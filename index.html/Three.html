@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вопросы с анимацией скролла</title>
+<style>
+  body {
+     background: linear-gradient(135deg, #6c63ff, #a0c4ff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 50px 0;
+  }
+
+  @keyframes gradientAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+  .question-container {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .question {
+    background: #fff;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+  }
+
+  .question.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .question h2 {
+    margin-top: 0;
+    color: #6c63ff;
+    font-size: 18px;
+  }
+
+  .question textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .question textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+  }
+</style>
+</head>
+<body>
+
+<div class="question-container">
+  <div class="question">
+    <h2>שאלה 1: מהו השטח של ירדן</h2>
+    <textarea placeholder="שטח המדינה: כ־89,342 קמ"ר></textarea>
+  </div>
+  <div class="question">
+    <h2>שאלה 2: מהו הכמות של התושבים בירדן נכון ל-2025</h2>
+    <textarea placeholder="נכון ל-2025 כמות התושבים שווה ל: 11,515,880"></textarea>
+  </div>
+  <div class="question">
+    <h2>שאלה3 - מהי השפה מדוברת בירדן רשמית </h2>
+    <textarea placeholder="השפה הרשמית: ערבית עוד מתחילת 1946"></textarea>
+  </div>
+
+  <div class="question">
+    <h2>שאלה 4: מהו המטבע של מדינת ירדן רשמית</h2>
+    <textarea placeholder="  המטבע הרשמי של ירדן הוא: דִּינָר יַרְדָּנִי שהוכנס לשימוש בשנת-1950"></textarea>
+  </div>
+  <div class="question">
+    <h2>שאלה 5: המשטר בירדן הוא </h2>
+    <textarea placeholder="המשטר: מונרכיה חוקתית בראשות המלך עבדאללה השני אחרי 1946"></textarea>
+  </div>    
+</div>
+
+<script>
+const questions = document.querySelectorAll('.question');
+
+function checkVisibility() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  questions.forEach(q => {
+    const questionTop = q.getBoundingClientRect().top;
+
+    if (questionTop < triggerBottom) {
+      q.classList.add('visible');
+    } else {
+      q.classList.remove('visible'); // убираем, если вышли за область
+    }
+  });
+}
+
+// Сбрасываем видимость при загрузке или возврате назад
+window.addEventListener('pageshow', () => {
+  questions.forEach(q => q.classList.remove('visible'));
+  checkVisibility(); // сразу проверяем видимость на экране
+});
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Пример шрифта */
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #1f1c2c, #3f2a56);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}

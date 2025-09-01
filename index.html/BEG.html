@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שאלה 4 – אקלים בירדן</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      overflow: hidden;
+
+      /* Фон с анимацией */
+      background: linear-gradient(180deg, #87CEEB, #f5deb3);
+      background-size: 400% 400%;
+      animation: desertSky 15s ease infinite;
+    }
+
+    @keyframes desertSky {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Облака */
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatClouds 60s linear infinite;
+    }
+
+    .cloud:before, .cloud:after {
+      content: '';
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .cloud1 {
+      width: 120px; height: 70px;
+      top: 15%; left: -150px;
+      animation-duration: 70s;
+    }
+    .cloud1:before {
+      width: 60px; height: 60px;
+      top: -20px; left: 10px;
+    }
+    .cloud1:after {
+      width: 80px; height: 80px;
+      top: -30px; left: 50px;
+    }
+
+    .cloud2 {
+      width: 160px; height: 90px;
+      top: 35%; left: -200px;
+      animation-duration: 90s;
+    }
+    .cloud2:before {
+      width: 70px; height: 70px;
+      top: -20px; left: 20px;
+    }
+    .cloud2:after {
+      width: 90px; height: 90px;
+      top: -40px; left: 60px;
+    }
+
+    @keyframes floatClouds {
+      from { transform: translateX(-200px); }
+      to { transform: translateX(120vw); }
+    }
+
+    /* Блок ответа */
+    .answer-box {
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 800px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(6px);
+      line-height: 1.8;
+      animation: fadeIn 2s ease;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      animation: bounceIn 2s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    h3 {
+      color: #34495e;
+      margin-top: 15px;
+      animation: fadeIn 2s ease;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Облака -->
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+
+  <!-- Блок ответа -->
+  <div class="answer-box">
+    <h2>שאלה 4 – אקלים בירדן</h2>
+    
+    <h3>א. אזורי אקלים ותופעות אקלימיות:</h3>
+    <ul>
+      <li>אקלים מדברי–צחיח – במזרח ובדרום.</li>
+      <li>אקלים ים–תיכוני – בצפון–מערב ובהרי המרכז.</li>
+      <li>אקלים ערבתי – באזורי המעבר.</li>
+      <li>תופעות: חמסינים, גשמי זלעפות בחורף בצפון–מערב, ולעיתים שלג בהרים.</li>
+    </ul>
+
+    <h3>ב. קלימוגרף:</h3>
+    <p>
+      בחורף יורדים משקעים רבים בצפון–מערב, בקיץ חם ויבש.  
+      בעמאן בקיץ מעל 30° ובחורף סביב 10° ואף פחות, עם פערים גדולים בין יום ללילה.
+    </p>
+
+    <h3>ג. גורמי אקלים:</h3>
+    <ul>
+      <li>מיקום גיאוגרפי – במדבריות המזרח התיכון.</li>
+      <li>קרבה לים התיכון בצפון–מערב.</li>
+      <li>מדבריות במזרח ובדרום.</li>
+      <li>גובה טופוגרפי – בהרים קר יותר ויש שלג.</li>
+    </ul>
+  </div>
+</body>
+</html>

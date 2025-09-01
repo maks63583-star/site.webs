@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פרויקט שגית :: בוגרות</title>
+ <link rel="stylesheet" href="dlya.css"
+</head>
+<body>
+
+  <div class="login-card">
+    <h2>ברוכים הבאים</h2>
+    <!-- Форма -->
+    <form id="loginForm">
+      
+      <div class="input-box">
+        <input type="text" id="username" name="username" required placeholder=" ">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="password" name="password" required placeholder=" ">
+        <label for="password">Password</label>
+      </div>
+
+      <button class="login-btn" type="button" onclick="window.location.href='Second.html'">
+  Login
+</button>
+ 
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </form>
+  </div>
+
+  <script>
+    // При нажатии на Login — переход на home.html
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // отменяем стандартное поведение формы
+      window.location.href = "home.html"; // редирект
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>גיאולוגיה - שאלה 5</title>
+  <style>
+    /* фон */
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #3a6073, #16222a);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* контейнер */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 700px;
+      line-height: 1.8;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      transform: translateY(40px);
+      opacity: 0;
+      animation: fadeUp 1.5s forwards;
+      transition: all 0.4s ease;
+    }
+
+    /* эффект при hover */
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    }
+
+    /* анимация появления */
+    @keyframes fadeUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      color: #ffcc70;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    .home-button {
+  display: block; /* Сделает кнопку блочным элементом, чтобы она занимала всю ширину */
+  width: 200px; /* Задаём фиксированную ширину */
+  margin: 20px auto; /* Центрируем кнопку по горизонтали и добавляем отступ сверху */
+  padding: 15px 30px; /* Отступы внутри кнопки */
+  background-color: #007BFF; /* Синий цвет фона */
+  color: white; /* Белый цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+  text-decoration: none; /* Убираем стандартное подчёркивание у ссылки */
+  border-radius: 5px; /* Скругляем углы */
+  font-family: Arial, sans-serif; /* Шрифт */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+    li {
+      margin-bottom: 10px;
+
+      
+
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>שאלה 5 – גיאולוגיה</h2>
+    <p><strong>תופעות גיאולוגיות בירדן והשפעתן:</strong></p>
+    <ul>
+      <li>השבר הסורי-אפריקאי – גורם לרעידות אדמה וליצירת בקעת הירדן.</li>
+      <li>רעידות אדמה – משפיעות על בטיחות מבנים ותשתיות.</li>
+      <li>הרי געש קדומים – עיצבו את הנוף בצפון-מזרח ירדן (מדבר הלבה – חארת א-שאם).</li>
+      <li>משאבי טבע – היווצרות מינרלים ומעיינות חמים בעקבות הפעילות הגיאולוגית.</li>
+    </ul>
+    <p><strong>השפעות על האדם והסביבה:</strong></p>
+    <ul>
+      <li>צורך בבנייה עמידה נגד רעידות אדמה.</li>
+      <li>פיתוח תיירות סביב תופעות גיאולוגיות ייחודיות (ים המלח, מעיינות חמים).</li>
+      <li>ניצול משאבים טבעיים – מינרלים, מים תרמיים.</li>
+    </ul>
+    <p><strong>הסבר מדוע:</strong> ירדן יושבת על גבול הלוחות הטקטוניים – הלוח הערבי והלוח האפריקאי, ולכן נוצרת פעילות טקטונית רבה באזור.</p>
+  </div>
+
+  <a href="Second.html" class="home-button" >
+  חזרה
+</a>
+</body>
+</html>

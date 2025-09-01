@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+body{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background:fixed;
+  background-image: url(pustynya-vadi-ram-v-iordanii-1.jpg);
+  overflow: hidden;
+}
+
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.login-card{
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  padding: 50px 40px;
+  width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgbaq(0,0,0,0.3);
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;transform:translateY(20px);
+  }
+  to{
+    opacity: 1; transform: translateY(0);
+  }
+}
+
+.login-card h2{
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+
+}
+
+
+.input-box{
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255, 0.12);
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: all 0.3 ease;
+
+}
+
+
+.input-box input:focus{
+  background-color: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgb(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+
+.input-box label {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  color: white;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3 ease;
+}
+
+
+.input-box input:focus + label,
+.input-box input:valid + label{
+  top: -8px;
+  left: 12px;
+  font-size: 12px;
+  color: white;
+  background-color: rgb(30, 30, 47,0.9);
+  padding: 0 6 px;
+  border-radius: 4px;
+}
+
+.login-btn{
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background:linear-gradient(90deg, #ff416c);
+  color: white;
+  font-size: 17px;
+  font-weight: 600px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+
+}
+
+
+.login-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgb(255, 73, 43,0.6);  
+}
+
+.login-card p{
+  text-align: center;
+  margin-top: 18px;
+  color: white;
+  font-size: 14px;
+}
+
+.login-card p a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.login-card p a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
